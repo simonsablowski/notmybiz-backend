@@ -4,7 +4,7 @@ class GalleryImageController extends /*Authentication*/Controller {
 	public function getFields() {
 		$Fields = array();
 		
-		$Fields[] = new ObjectField('GalleryAlbumId', 'Album');
+		$Fields[] = new ObjectField('AlbumId', 'Album', 'GalleryAlbum');
 		
 		$Fields[] = new TextField('fileName', 'File Name', 100);
 		
