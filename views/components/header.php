@@ -9,9 +9,12 @@
 		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>web/js/cheese.js"></script>
 	</head>
 	<body>
+		<h1 id="logo">
+			<a href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>" title="<? echo $this->localize('notmybiz Backend'); ?>"><img src="<? echo $this->getApplication()->getConfiguration('notmybizUrl'); ?>web/img/logo.png" alt="<? echo $this->localize('notmybiz'); ?>" title="<? echo $this->localize('notmybiz'); ?>"/></a>
+		</h1>
 <? if (isset($message) && !empty($message)): ?>
-			<div id="message">
-				<? echo $this->localize($message); ?>
-			</div>
+		<div id="message">
+			<? echo $this->localize($message); ?>
+		</div>
 <? endif; ?>
 		<div id="document">
