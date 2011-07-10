@@ -18,16 +18,16 @@ foreach ($Objects as $Object) {
 							<? echo $this->localize('Position'); ?>
 
 						</th>
-						<th>
+						<th class="main field">
 							<? echo $this->localize('File Name'); ?>
 
 						</th>
-						<th>
-							<? echo $this->localize('Preview'); ?>
+						<th class="main field">
+							<? echo $this->localize('Title'); ?>
 
 						</th>
-						<th>
-							<? echo $this->localize('Status'); ?>
+						<th class="field">
+							<? echo $this->localize('Preview'); ?>
 
 						</th>
 						<th class="option">
@@ -55,12 +55,12 @@ foreach ($Objects as $Object) {
 							<? echo $Object->getFileName(); ?>
 
 						</td>
-						<td>
-							<? echo $this->localize($Object->getPreview()); ?>
+						<td class="main data field">
+							<? echo $Object->getTitle(); ?>
 
 						</td>
-						<td class="last">
-							<? echo $this->localize($Object->getStatus()); ?>
+						<td class="field">
+							<? echo $this->localize($Object->getPreview()); ?>
 
 						</td>
 						<td class="<? if ($n + 1 == count($Objects)): ?>last <? endif; ?>option">
