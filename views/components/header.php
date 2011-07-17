@@ -3,14 +3,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta http-equiv="Content-Language" content="en"/>
-		<title><? echo $this->localize('notmybiz Backend'); ?></title>
-		<link href="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>web/css/style.css" rel="stylesheet" type="text/css" />
-		<link href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>web/css/style.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>web/js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>web/js/cheese.js"></script>
+		<title><? echo $this->getApplication()->getConfiguration('frontendName') . $this->localize(' Backend'); ?></title>
+		<link href="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>js/cheese.js"></script>
 	</head>
 	<body>
-		<a id="logo" href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>" title="<? echo $this->localize('notmybiz Backend'); ?>"><img src="<? echo $this->getApplication()->getConfiguration('notmybizUrl'); ?>web/img/logo.png" alt="<? echo $this->localize('notmybiz'); ?>" title="<? echo $this->localize('notmybiz'); ?>"/></a>
+		<a id="logo" href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>" title="<? echo $this->getApplication()->getConfiguration('frontendName') . $this->localize(' Backend'); ?>"><img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>img/logo.png" alt="<? echo $this->getApplication()->getConfiguration('frontendName'); ?>" title="<? echo $this->getApplication()->getConfiguration('frontendName'); ?>"/></a>
 <? if (isset($message) && !empty($message)): ?>
 		<div id="message">
 			<? echo $this->localize($message); ?>

@@ -6,7 +6,9 @@ $configuration['pathApplication'] = dirname(__FILE__) . '/';
 
 $configuration['baseUrl'] = '/notmybiz-backend/';
 $configuration['cheeseUrl'] = '/cheese/';
-$configuration['notmybizUrl'] = '/notmybiz/';
+$configuration['frontendUrl'] = '/notmybiz/';
+
+$configuration['frontendName'] = 'notmybiz';
 
 $configuration['includeDirectories'] = array(
 	$configuration['pathApplication'],
