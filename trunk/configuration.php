@@ -25,6 +25,15 @@ $configuration['Database'] = array(
 	'password' => ''
 );
 
+$configuration['Localization'] = array(
+	'default' => 'en',
+	'en' => array(
+		'language' => 'en',
+		'locale' => 'en_GB',
+		'name' => 'English'
+	)
+);
+
 $configuration['Request'] = array(
 	'defaultQuery' => 'GalleryImage/index',
 	'aliasQueries' => array()
