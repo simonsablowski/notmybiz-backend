@@ -1,0 +1,5 @@
+msgid "GalleryImage"
+msgstr "Gallery"
+
+msgid "GalleryAlbum"
+msgstr "Gallery Albums"

@@ -19,11 +19,19 @@ foreach ($Objects as $Object) {
 
 						</th>
 						<th class="main field">
+							<? echo $this->localize('Image'); ?>
+
+						</th>
+						<th class="main field">
 							<? echo $this->localize('File Name'); ?>
 
 						</th>
 						<th class="main field">
 							<? echo $this->localize('Title'); ?>
+
+						</th>
+						<th class="main field">
+							<? echo $this->localize('Description'); ?>
 
 						</th>
 						<th class="field">
@@ -41,15 +49,20 @@ foreach ($Objects as $Object) {
 				<tbody class="body accordeon">
 <? foreach ($GalleryAlbums as $GalleryAlbum): ?>
 					<tr id="group<? echo $GalleryAlbum->getId(); ?>" class="divider row">
-						<td class="field data" colspan="8">
+						<td class="field data" colspan="6">
 							<? echo $GalleryAlbum->getTitle(); ?> (<? echo $GalleryAlbum->getKey(); ?>): <em><? echo $this->localize('%d ' . (($count = count($GalleryAlbum->getImages())) == 1 ? $this->localize('image') : $this->localize('images')), $count); ?></em>
+						</td>
+						<td class="field data right">
+							<a href="<? echo $this->link('GalleryAlbum/update/' . implode('/', $GalleryAlbum->getPrimaryKeyValue())); ?>" title="<? echo $this->localize('Update'); ?>"><? echo $this->localize('Update'); ?></a>
 						</td>
 					</tr>
 <? foreach ($GalleryAlbum->getImages() as $n => $Object): ?>
 					<tr class="<? echo $n % 2 ? 'odd' : 'even'; ?> group<? echo $GalleryAlbum->getId(); ?> row">
 						<td class="<? if ($n + 1 == count($Objects)): ?>last <? endif; ?>number">
-							<? echo $Object->getPosition(); ?>
-
+							<? echo $Object->getPosition(); ?> <small>(<? echo $n + 1; ?>)</small>
+						</td>
+						<td class="main data field">
+							<img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>imgproc/<? echo urldecode($Object->getFileName()); ?>/?w=75&amp;h=75&amp;m=crop" alt="<? echo $Object->getTitle(); ?>" title="<? echo $Object->getTitle(); ?>"/>
 						</td>
 						<td class="main data field">
 							<? echo $Object->getFileName(); ?>
@@ -57,6 +70,10 @@ foreach ($Objects as $Object) {
 						</td>
 						<td class="main data field">
 							<? echo $Object->getTitle(); ?>
+
+						</td>
+						<td class="main data field">
+							<? echo $Object->getDescription(); ?>
 
 						</td>
 						<td class="field">
