@@ -52,7 +52,7 @@ foreach ($Objects as $Object) {
 						<td class="field data" colspan="6">
 							<? echo $GalleryAlbum->getTitle(); ?> (<? echo $GalleryAlbum->getKey(); ?>): <em><? echo $this->localize('%d ' . (($count = count($GalleryAlbum->getImages())) == 1 ? $this->localize('image') : $this->localize('images')), $count); ?></em>
 						</td>
-						<td class="field data right">
+						<td class="field data right" colspan="2">
 							<a href="<? echo $this->link('GalleryAlbum/update/' . implode('/', $GalleryAlbum->getPrimaryKeyValue())); ?>" title="<? echo $this->localize('Update'); ?>"><? echo $this->localize('Update'); ?></a>
 						</td>
 					</tr>
