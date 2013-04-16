@@ -62,7 +62,7 @@ foreach ($Objects as $Object) {
 							<? echo $Object->getPosition(); ?> <small>(<? echo $n + 1; ?>)</small>
 						</td>
 						<td class="main data field">
-							<img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>imgproc/<? echo urldecode($Object->getFileName()); ?>/?w=75&amp;h=75&amp;m=crop" alt="<? echo $Object->getTitle(); ?>" title="<? echo $Object->getTitle(); ?>"/>
+							<img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>Image:show:<? echo urldecode($Object->getFileName()); ?>:75:75:true:true:80" alt="<? echo $Object->getTitle(); ?>" title="<? echo $Object->getTitle(); ?>"/>
 						</td>
 						<td class="main data field">
 							<? echo $Object->getFileName(); ?>
