@@ -1,6 +1,6 @@
 <?php
 
-class GalleryImageController extends /*Authentication*/Controller {
+class GalleryImageController extends AuthenticationController {
 	public function getFields() {
 		$Fields = array();
 		
