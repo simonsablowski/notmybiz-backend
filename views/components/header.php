@@ -17,5 +17,9 @@
 		</div>
 <? endif; ?>
 		<a id="logo" href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>" title="<? echo $this->localize('%s Backend', $this->getApplication()->getConfiguration('frontendName')); ?>"><img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>img/logo.png" alt="<? echo $this->localize('%s Backend', $this->getApplication()->getConfiguration('frontendName')); ?>" title="<? echo $this->localize('%s Backend', $this->getApplication()->getConfiguration('frontendName')); ?>"/></a>
-		<a id="signOut" href="<? echo $this->getApplication()->getConfiguration('baseUrl') . 'Authentication/signOut'; ?>" title="<? echo $this->localize('Sign out'); ?>"><? echo $this->localize('Sign out'); ?></a>
 		<div id="document">
+			<div class="authentication options">
+<? if ($isSignedIn): ?>
+				<a class="option" href="<? echo $this->getApplication()->getConfiguration('baseUrl') . 'Authentication/signOut'; ?>" title="<? echo $this->localize('Sign out'); ?>"><? echo $this->localize('Sign out'); ?></a>
+<? endif; ?>
+			</div>
