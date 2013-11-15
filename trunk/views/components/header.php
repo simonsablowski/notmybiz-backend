@@ -7,7 +7,6 @@
 		<link href="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>css/style.css" rel="stylesheet" type="text/css"/>
 		<link href="<? echo $this->getApplication()->getConfiguration('baseUrl'); ?>css/style.css" rel="stylesheet" type="text/css"/>
 		<link href="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>js/jquery-1.5.1.min.js"></script>
 		<script type="text/javascript" src="<? echo $this->getApplication()->getConfiguration('cheeseUrl'); ?>js/cheese.js"></script>
 	</head>
 	<body>

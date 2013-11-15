@@ -4,17 +4,17 @@ $configuration = array();
 
 $configuration['pathApplication'] = dirname(__FILE__) . '/';
 
-$configuration['baseUrl'] = '/notmybiz-backend/';
+$configuration['baseUrl'] = '/notmybiz/backend/';
 $configuration['cheeseUrl'] = '/cheese/';
-$configuration['frontendUrl'] = '/notmybiz/';
+$configuration['frontendUrl'] = '/notmybiz/frontend/';
 
 $configuration['frontendName'] = 'notmybiz';
 
 $configuration['includeDirectories'] = array(
 	$configuration['pathApplication'],
-	$configuration['pathApplication'] . '../cheese/',
-	$configuration['pathApplication'] . '../notmybiz/',
-	$configuration['pathApplication'] . '../nacho/'
+	$configuration['pathApplication'] . '../../cheese/',
+	$configuration['pathApplication'] . '../frontend/',
+	$configuration['pathApplication'] . '../../nacho/'
 );
 
 $configuration['Database'] = array(
@@ -38,5 +38,7 @@ $configuration['Request'] = array(
 	'defaultQuery' => 'GalleryImage/index',
 	'aliasQueries' => array()
 );
+
+$configuration['basicAuthentication'] = FALSE;
 
 $configuration['debugMode'] = FALSE;
