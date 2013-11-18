@@ -15,12 +15,12 @@ class GalleryImageController extends AuthenticationController {
 		$Fields[] = new PositionField('position', 'Position');
 		
 		$Fields[] = new OptionsField('preview', 'Preview', array(
-			new Option('yes', 'yes', TRUE),
+			new Option('yes', 'yes', true),
 			new Option('no', 'no')
 		));
 		
 		$Fields[] = new OptionsField('status', 'Status', array(
-			new Option('active', 'active', TRUE),
+			new Option('active', 'active', true),
 			new Option('deleted', 'deleted')
 		));
 		

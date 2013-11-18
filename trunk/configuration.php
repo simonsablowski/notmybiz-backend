@@ -39,6 +39,6 @@ $configuration['Request'] = array(
 	'aliasQueries' => array()
 );
 
-$configuration['basicAuthentication'] = FALSE;
+$configuration['basicAuthentication'] = false;
 
-$configuration['debugMode'] = FALSE;
+$configuration['debugMode'] = false;
