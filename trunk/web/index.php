@@ -7,5 +7,5 @@ foreach ($configuration['includeDirectories'] as $includeDirectory) {
 	if (file_exists($filePath = $includeDirectory . 'Application.php')) break include $filePath;
 }
 
-$Application = new Application($configuration, isset($_GET['localization']) ? $_GET['localization'] : NULL);
-$Application->run(isset($_GET['query']) ? $_GET['query'] : NULL);
+$Application = new Application($configuration, isset($_GET['localization']) ? $_GET['localization'] : null);
+$Application->run(isset($_GET['query']) ? $_GET['query'] : null);
