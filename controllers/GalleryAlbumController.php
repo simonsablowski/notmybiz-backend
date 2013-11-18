@@ -13,7 +13,7 @@ class GalleryAlbumController extends AuthenticationController {
 		$Fields[] = new TextField('description', 'Description');
 		
 		$Fields[] = new OptionsField('status', 'Status', array(
-			new Option('active', 'active', TRUE),
+			new Option('active', 'active', true),
 			new Option('deleted', 'deleted')
 		));
 		
