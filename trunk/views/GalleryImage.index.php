@@ -3,6 +3,8 @@ $GalleryAlbums = array();
 foreach ($Objects as $Object) {
 	$GalleryAlbums[$Object->getAlbumId()] = $Object->getAlbum();
 }
+$parameterSet = $this->getConfiguration('parameterSetImages');
+$imagePathPattern = sprintf('%sImage:show:%%s:%d:%d:%s:%s:%d', $this->getApplication()->getConfiguration('frontendUrl'), $parameterSet['width'], $parameterSet['height'], $parameterSet['crop'] ? 'true' : 'false', $parameterSet['grey'] ? 'true' : 'false', $parameterSet['quality']);
 ?>
 <? $this->displayView('components/header.php'); ?>
 			<h1>
@@ -62,7 +64,7 @@ foreach ($Objects as $Object) {
 							<? echo $Object->getPosition(); ?> <small>(<? echo $n + 1; ?>)</small>
 						</td>
 						<td class="main data field">
-							<img src="<? echo $this->getApplication()->getConfiguration('frontendUrl'); ?>Image:show:<? echo urldecode($Object->getFileName()); ?>:75:75:true:true:80" alt="<? echo $Object->getTitle(); ?>" title="<? echo $Object->getTitle(); ?>"/>
+							<img src="<? echo sprintf($imagePathPattern, urldecode($Object->getFileName())); ?>" alt="<? echo $Object->getTitle(); ?>" title="<? echo $Object->getTitle(); ?>"/>
 						</td>
 						<td class="main data field">
 							<? echo $Object->getFileName(); ?>

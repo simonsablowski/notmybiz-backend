@@ -41,4 +41,12 @@ $configuration['Request'] = array(
 
 $configuration['basicAuthentication'] = false;
 
+$configuration['parameterSetImages'] = array(
+	'width' => 81,
+	'height' => 81,
+	'crop' => true,
+	'grey' => true,
+	'quality' => 70
+);
+
 $configuration['debugMode'] = false;
