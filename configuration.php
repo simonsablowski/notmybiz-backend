@@ -4,9 +4,9 @@ $configuration = array();
 
 $configuration['pathApplication'] = dirname(__FILE__) . '/';
 
-$configuration['baseUrl'] = '/notmybiz/backend/';
+$configuration['baseUrl'] = '/';
 $configuration['cheeseUrl'] = '/cheese/';
-$configuration['frontendUrl'] = '/notmybiz/frontend/';
+$configuration['frontendUrl'] = 'http://www.notmybiz.com/';
 
 $configuration['frontendName'] = 'notmybiz';
 
@@ -42,8 +42,8 @@ $configuration['Request'] = array(
 $configuration['basicAuthentication'] = false;
 
 $configuration['parameterSetImages'] = array(
-	'width' => 81,
-	'height' => 81,
+	'width' => 100,
+	'height' => 100,
 	'crop' => true,
 	'grey' => true,
 	'quality' => 70
